@@ -50,10 +50,13 @@ export default class MondayWidgetFlexPlugin extends FlexPlugin {
       });
 
       // Screen pop functionality
-      // Add listener for inbound calls
+      // Add listener for inbound interactions
       flex.Actions.addListener("afterAcceptTask", async (event) => {
-        // Retrieve caller and remove initial '+' from phone number as monday.com phone number column type does not use it in front of country codes
-        const caller = event.task.attributes.from.substring(1);
+        // Remove WA prefix if any
+        const contact = event.task.attributes.from.replace('whatsapp:','');
+        
+        // Remove initial '+' from phone number as monday.com phone number column type does not use it in front of country codes
+        const caller = contact.substring(1);
 
         // Find item associated with caller
         const callerItemQuery = `query {items_by_column_values (board_id: ${config.BOARD_ID}, column_id: \"${config.PHONE_NUMBER_COLUMN_ID}\", column_value: \"${caller}\") {id }}`;
