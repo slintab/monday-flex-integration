@@ -1,5 +1,3 @@
-# Twilio Flex integration for monday.com
-
 ![banner](banner.png)
 
 This repository contains a sample integration of Twilio Flex and monday.com.
