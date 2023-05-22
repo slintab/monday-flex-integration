@@ -1,7 +1,5 @@
 # Twilio Flex integration for monday.com
 
-![header](header.png)
-
 This repository contains a sample integration of Twilio Flex and monday.com.
 
 ## Structure
