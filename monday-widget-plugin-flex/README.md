@@ -10,8 +10,8 @@ It also enables two common contact-center features:
 ## Demo
 
 <p float="left">
-  <img src="../images/widget1.jpg" height="160" width="300"/>
-  <img src="../images/widget2.jpg" height="160" width="300" /> 
+  <img src="../images/widget1.jpg" height="240" width="450"/>
+  <img src="../images/widget2.jpg" height="240" width="450" /> 
 </p>
 
 
